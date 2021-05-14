@@ -1,4 +1,5 @@
-MainClass.class
-ReadProperties.class
+telegrambot/GayaneBot.class
+telegrambot/ReadProperties.class
+telegrambot/MainClass.class
+telegram/area/AreaFinding.class
 telegram/weather/WeatherParsing.class
-GayaneBot.class
