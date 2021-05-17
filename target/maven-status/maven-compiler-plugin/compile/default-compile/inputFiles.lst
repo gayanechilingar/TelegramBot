@@ -2,4 +2,6 @@
 /home/gayanec/NetBeansProjects/telegram-bot-java-tutorial-master/src/main/java/telegram/weather/WeatherParsing.java
 /home/gayanec/NetBeansProjects/telegram-bot-java-tutorial-master/src/main/java/telegrambot/ReadProperties.java
 /home/gayanec/NetBeansProjects/telegram-bot-java-tutorial-master/src/main/java/telegram/area/AreaFinding.java
+/home/gayanec/NetBeansProjects/telegram-bot-java-tutorial-master/src/main/java/telegram/coinbase/BankParsing.java
 /home/gayanec/NetBeansProjects/telegram-bot-java-tutorial-master/src/main/java/telegrambot/MainClass.java
+/home/gayanec/NetBeansProjects/telegram-bot-java-tutorial-master/src/main/java/telegram/buttons/Reply.java

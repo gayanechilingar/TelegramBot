@@ -1,5 +1,7 @@
 telegrambot/GayaneBot.class
 telegrambot/ReadProperties.class
-telegrambot/MainClass.class
+telegram/buttons/Reply.class
 telegram/area/AreaFinding.class
 telegram/weather/WeatherParsing.class
+telegram/coinbase/BankParsing.class
+telegrambot/MainClass.class

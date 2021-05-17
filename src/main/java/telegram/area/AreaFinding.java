@@ -16,10 +16,10 @@ public class AreaFinding {
     ReadProperties prop = new ReadProperties();
 
     @SneakyThrows
-    public String getCity(String longitude, String latitude) {
+    public static String getCity(String longitude, String latitude) {
         String city = "";
         JSONObject temp = null;
-        JSONObject json = readJsonFromUrl("https://api.weatherbit.io/v2.0/current?lat=" + latitude + "&lon=" + longitude + "&key=" + prop.getProp("API.WEATHER.1") + "&include=minutely");
+        JSONObject json = readJsonFromUrl("https://api.weatherbit.io/v2.0/current?lat=" + latitude + "&lon=" + longitude + "&key=" + ReadProperties.getProp("API.WEATHER.1") + "&include=minutely");
         city = json.getJSONArray("data").getJSONObject(0).getString("city_name");
         return city;
     }

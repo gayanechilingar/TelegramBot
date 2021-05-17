@@ -1,6 +1,12 @@
 package telegrambot;
 
+
+import telegram.area.AreaFinding;
+import java.awt.geom.Area;
+import telegrambot.ReadProperties;
+import telegram.weather.WeatherParsing;
 import lombok.SneakyThrows;
+import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Message;
 import org.telegram.telegrambots.api.objects.Update;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -18,12 +24,29 @@ public class GayaneBot extends TelegramLongPollingBot {
 
         System.out.println(update.getMessage().getText());
 
-        long chat_id = update.getMessage().getChatId();
+        Long chat_id = update.getMessage().getChatId();
         String message = update.getMessage().getText();
-        if (update.getMessage().getLocation() != null) {
-            String longitude = update.getMessage().getLocation().getLongitude().toString();
-            String latitude = update.getMessage().getLocation().getLatitude().toString();
-        }  
+        sendMsg("bot answer is " + message, chat_id );
+//        if (update.getMessage().getLocation() = null) {
+//            System.out.println("update.getMessage() "+update.getMessage());
+//            String longitude = update.getMessage().getLocation().getLongitude().toString();
+//            String latitude = update.getMessage().getLocation().getLatitude().toString();
+//            String city = AreaFinding.getCity(longitude, latitude);
+//            sendMsg("Вы находитесь в городе "  +
+//                    "\nПогода в городе "  + " равна " + "℃" +
+//                    "\nКоличество заболевших в стране " + "NONE" + " за сегодня " + "NONE" + " человек" +
+//                    "\nВалюта: " + "NONE", chat_id);
+//        }  
+    }
+    
+    
+    @SneakyThrows
+    public synchronized void sendMsg(String s, Long chat_id) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chat_id + "print chat id");
+        sendMessage.setText(s);
+        sendMessage.setReplyMarkup(null);
+        execute(sendMessage);
     }
 
     public String getBotUsername() {
